@@ -1,0 +1,15 @@
+{
+    "name": "prontotype/shorturls-plugin",
+    "type": "prontotype-plugin",
+    "require": {
+        "prontotype/composer-installer": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prontotype\\Plugins\\ShortUrls\\": "src/"
+        }
+    },
+    "extra": {
+        "provider": "Prontotype\\Plugins\\ShortUrls\\ShortUrlsPlugin"
+    }
+}
