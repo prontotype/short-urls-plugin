@@ -22,10 +22,6 @@ class ShortUrlsPlugin extends AbstractPlugin implements PluginInterface
                 ->name('redirect');
         }
         
-        $handler->get('/{templatePath}', 'Prontotype\Http\Controllers\DefaultController::notFound')
-                ->name('notfound')
-                ->assert('templatePath', '[^:]+:.+');
-
         $this->container->make('prontotype.events')->emit(Event::named('shortUrls.registered'));
     }
 
