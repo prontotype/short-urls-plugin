@@ -1,6 +1,7 @@
 <?php namespace Prontotype\Plugins\ShortUrls;
 
 use Prontotype\Container;
+use League\Event\Event;
 use Prontotype\Plugins\AbstractPlugin;
 use Prontotype\Plugins\PluginInterface;
 
