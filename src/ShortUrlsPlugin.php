@@ -16,13 +16,14 @@ class ShortUrlsPlugin extends AbstractPlugin implements PluginInterface
     {
         $conf = $this->container->make('prontotype.config');
         $handler = $this->container->make('prontotype.http');
+        $events = $this->container->make('prontotype.events');
 
+        $events->emit(Event::named('shortUrls.register.start'));
         if ($conf->get('short_urls')) {
             $handler->get('/id:{templateId}', 'Prontotype\Plugins\ShortUrls\ShortUrlsController::redirectById')
                 ->name('redirect');
         }
-        
-        $this->container->make('prontotype.events')->emit(Event::named('shortUrls.registered'));
+        $events->emit(Event::named('shortUrls.register.end'));
     }
 
 }
