@@ -1,5 +1,5 @@
 {
-    "name": "prontotype/shorturls-plugin",
+    "name": "prontotype/short-urls-plugin",
     "type": "prontotype-plugin",
     "require": {
         "prontotype/composer-installer": "dev-master"
